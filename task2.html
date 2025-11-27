@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Білецька, ПП-26 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="result">
+<script>
+
+let arr = [];
+for (let i = 0; i < 15; i++) {
+    arr[i] = Math.floor(Math.random() * 100);
+}
+
+document.write("Початковий масив:<br>" + arr.join(" ") + "<br><br>");
+
+let minIndex = 0;
+
+for (let i = 1; i < arr.length; i++) {
+    if (arr[i] < arr[minIndex]) {
+        minIndex = i;
+    }
+}
+
+// якщо мінімальний елемент НЕ перший
+if (minIndex > 0) {
+    let temp = arr[minIndex - 1];
+    arr[minIndex - 1] = arr[minIndex];
+    arr[minIndex] = temp;
+}
+
+document.write("Масив після обміну:<br>" + arr.join(" "));
+
+
+</script>
+</div>
+    <a href="index.html" class="back-btn">← Повернутись на головну</a>
+</html>

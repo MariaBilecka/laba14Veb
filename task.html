@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Білецька, ПП-26 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="result">
+<script>
+
+
+let Treag = [];
+for (let n=1; n<= 10; n++) {
+    Treag.push (n*(n+1)/2);
+}
+document.write ("Treag:" + Treag.join(" ") + "<br><br>");
+
+let kvd =[];
+for (let i=1; i<= 10; i++){
+    kvd.push(i * i);
+}
+document.write ("Kvd:" + kvd.join(" ") + "<br><br>");
+
+let rez = Treag.concat(kvd);
+document.write ("Rez:" + rez.join(" ") + "<br><br>");
+
+rez.sort(function(a,b){return b-a;});
+document.write("rez reverse sorted: " + rez.join(" "));
+</script>
+</div>
+    <a href="index.html" class="back-btn">← Повернутись на головну</a>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Білецька, ПП-26 </title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<div class="result">
+<script>
+
+let fruits = ['apple','pineapple','mango','melon','grape'];
+let citrus = ['orange','lemon','lime'];
+
+document.write("Fruits: " + fruits.join(", ") + "<br><br>");
+document.write("Citrus: " + citrus.join(", ") + "<br><br>");
+
+let allFruits = fruits.concat(citrus);
+document.write("Об'єднаний масив: " + allFruits.join(", ") + "<br><br>");
+
+let indexMango = fruits.indexOf('mango');
+fruits.splice(indexMango + 1, 0, 'pear','cherry','plum','raspberry','strawberry');
+document.write("Fruits після додавання: " + fruits.join(", ") + "<br><br>");
+
+fruits.splice(-3);
+document.write("Fruits після видалення останніх 3: " + fruits.join(", ") + "<br><br>");
+
+let sortedFruits = fruits.slice().sort();
+document.write("Fruits відсортовані: " + sortedFruits.join(", ") + "<br><br>");
+
+let reverseFruits = fruits.slice().sort().reverse();
+document.write("Fruits у зворотному порядку: " + reverseFruits.join(", ") + "<br><br>");
+
+let lengthFruits = fruits.slice().sort((a,b)=>a.length - b.length);
+document.write("Fruits за довжиною слів: " + lengthFruits.join(", ") + "<br><br>");
+</script>
+</div>
+    <a href="index.html" class="back-btn">← Повернутись на головну</a>
+</html>
